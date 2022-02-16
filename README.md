@@ -41,6 +41,6 @@ Outputs a numeric vector of mortality rates for the heterogeneous population of 
 ```{r}
 age_vec <- 0:110
 rho0 <- c(0.5, 0.5); m0 <- c(0.01, 0.002); beta <- c(0.039, 0.039)
-mrates <- gompertz(rho0, m0, beta, age_vec)
+mrates <- projectRpkg::gompertz(rho0, m0, beta, age_vec)
 ```
 
