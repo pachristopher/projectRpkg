@@ -5,8 +5,7 @@ This R package contains a number of functions to create a numeric vector of mort
 
 It is an implementation of the formulae and algorithms in Avraam *et al*, "A mathematical model of mortality dynamics across the lifespan combining heterogeneity and stochastic effect" (2013):
 
-<img src="https://render.githubusercontent.com/render/math?math=
-\begin{align*}
+<img src="https://render.githubusercontent.com/render/math?math=\begin{align*}
 m_{i} = \frac{ \displaystyle \sum_{j=1}^{n} \frac{\rho_{ji} m_{j0} e^{\beta_{j}i}}{1+0.5 m_{j0} e^{\beta_{j} i}} }{1-0.5 \displaystyle \sum_{j=1}^{n} \frac{\rho_{ji} m_{j0} e^{\beta_{j}i}}{1+0.5 m_{j0} e^{\beta_{j} i}}} \\
 \\
 \rho_{ji} = \frac{\rho_{j0} \displaystyle \prod_{k=0}^{i-1} \left(  \frac{1-0.5 m_{j0} e^{\beta_{j}k}}{1+0.5 m_{j0} e^{\beta_{j}k}} \right)}{\displaystyle \sum_{s=1}^n \left( \rho_{s0} \prod_{k=0}^{i-1} \left( \frac{1-0.5 m_{s0} e^{\beta_{s}k}}{1+0.5 m_{s0} e^{\beta_{s}k}} \right) \right) } 
