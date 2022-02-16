@@ -1,7 +1,7 @@
 # projectRpkg
 Repository for R package for final project
 
-This R package contains a number of functions to create a numeric vector of mortality rates for a heterogeneous population containing n sub-populations. The length of this vector is from 0 to the upper age limit of the population, usually 110, I.e. giving a length of 111. 
+This R package contains a number of functions to create a numeric vector of mortality rates for a heterogeneous population containing n sub-populations. The length of this vector is from 0 to the upper age limit of the population, usually 110, *i.e.* giving a length of 111. 
 
 ### Inputs
 
