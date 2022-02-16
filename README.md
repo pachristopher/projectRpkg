@@ -3,6 +3,19 @@ Repository for R package for final project
 
 This R package contains a number of functions to create a numeric vector of mortality rates from a Gompertz model for a heterogeneous population containing n sub-populations. The length of this vector is from 0 to the upper age limit of the population, usually 110, *i.e.* giving a length of 111. 
 
+### Dependencies
+
+`devtools` : need to `install.packages("devtools")
+
+### Loading the package
+
+`library(devtools)`
+`install("projectRpkg")`
+
+### Usage
+
+projectRpkg::gompertz()
+
 ### Inputs
 
 - rho0: Numeric vector of length n of initial fractions of sub-populations within total population.
@@ -14,4 +27,11 @@ This R package contains a number of functions to create a numeric vector of mort
 
 Outputs a numeric vector of mortality rates for the heterogeneous population of length 0:$\omega$.
 
+### Examples
+
+```{r}
+age_vec <- 0:110
+rho0 <- c(0.5, 0.5); m0 <- c(0.01, 0.002); beta <- c(0.039, 0.039)
+mrates <- gompertz(rho0, m0, beta, age_vec)
+```
 
