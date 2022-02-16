@@ -10,7 +10,8 @@ This R package contains a number of functions to create a numeric vector of mort
 - beta: Numeric vector of length n of sub-population rates of mortality dynamics.
 - age_vec: Numeric vector of ages from 0 to upper age limit of population, $\omega$.
 
-### Returns
+### Returns
+
 Outputs a numeric vector of mortality rates for the heterogeneous population of length 0:$\omega$.
 
 
