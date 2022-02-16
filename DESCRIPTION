@@ -1,0 +1,16 @@
+Package: packages
+Title: Create vector of mortality rates from a Gompertz model
+Version: 0.0.0.9000
+Authors@R: 
+    person("Paul", "Christopher", , "paul.christopher@mycit.ie", role = c("aut", "cre"),
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+Description: Creates vector of mortality rates for a heterogeneous population from a Gompertz model. It uses the formulae in Avraam et al, "A mathematical model of mortality dynamics across the lifespan combining heterogeneity and stochastic effects" (2013), p. 803. 
+    The inputs to the function are: 'rho0': a vector of initial population proportions;
+    m0: a vector of initial mortality rates; beta: a vector of ageing rates;
+    age_vec: a vector of ages from 0 to the upper age limit of the population.
+    rho0, m0 and beta are all of length of the number of sub-populations. 
+License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
+    license
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.2.9000
