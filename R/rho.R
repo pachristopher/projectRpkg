@@ -13,13 +13,11 @@
 rho <- function(rho0, m0, beta, age_vec){
   #check that length of parameter vectors match
   stopifnot("lenght of parameter vectors representing sub-populations need to be equal"= length(m0)==length(beta))
-  prod_vec <- function(m0, beta, age_vec) { # function to create vector of products
-    return((1-0.5*m0*exp(beta*age_vec))/(1+0.5*m0*exp(beta*age_vec)))
-  }
   #create matrix of numerators of dim(i x j)
   numerators <- matrix(nrow=length(age_vec), ncol = length(rho0))
+  numerators[1,] <- rho0
   for(i in 1:length(rho0)){
-    numerators[,i] <- cbind(cumprod(rho0[i]*prod_vec(m0[i], beta[i], age_vec)))
+    numerators[2:length(age_vec),i] <- cbind(rho0[i]*cumprod(prod_vec(m0[i], beta[i], age_vec[1:(length(age_vec)-1)])))
   }
   denominator <- rowSums(numerators[,1:length(rho0)])
   rho <- matrix(nrow = length(age_vec), ncol = length(rho0))
